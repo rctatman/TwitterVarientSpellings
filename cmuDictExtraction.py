@@ -1,7 +1,9 @@
 # creates a new file
 dicByFreq = open("dicByFreq.txt", "w")
 
-# opens existing file in same directory
+# opens existing file in same directory. You will need a copy of the CMU pronouncing dictionary, avabile here: 
+# http://www.speech.cs.cmu.edu/cgi-bin/cmudict
+# freqTop100.txt is avalible in this repo.
 dic = open("cmudict-0.7b.txt", "r")
 freq = open("freqTop100.txt", "r")
 # this prevents us from having to go back to the beginning of the file in every loop.
