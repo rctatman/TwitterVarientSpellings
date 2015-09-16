@@ -12,6 +12,12 @@ library(devtools)
 install_github("twitteR", username = "geoffjentry")
 library(twitteR)
 
+# add addition tools (this should mitigate the changes Twitter made to thier API summer 2015)
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(twitteR, sentiment, plyr, ggplot2, wordcloud, RColorBrewer, httpuv, RCurl, base64enc)
+
+options(RCurlOptions = list(cainfo = system.file("CurlSSL", "cacert.pem", package = "RCurl")))
+
 # SIGN IN. You'll need your own api key and secret and acccess token and secret. 
 
 api_key <- "YOU WILL NEED YOUR OWN"
